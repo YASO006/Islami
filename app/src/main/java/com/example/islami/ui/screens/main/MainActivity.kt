@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.islami.R
 import com.example.islami.ui.screens.fragments.hadith.HadithFragment
 import com.example.islami.ui.screens.fragments.quran.QuranFragment
+import com.example.islami.ui.screens.fragments.sebiha.SebihaFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -64,8 +65,10 @@ class MainActivity : AppCompatActivity() {
                     return@setOnItemSelectedListener false
                 }
                 R.id.sebhaTab -> {
-                    Toast.makeText(baseContext,"Todo Task",Toast.LENGTH_SHORT).show()
-                    return@setOnItemSelectedListener false
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainer, SebihaFragment())
+                        .addToBackStack(null)
+                        .commit()
 
                 }
 
