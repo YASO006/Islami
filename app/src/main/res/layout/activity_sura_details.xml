@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.screens.main.SuraDetailsActivity">
+
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_1"
+
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="26dp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/SurahEnglish"
+        app:layout_constraintBottom_toBottomOf="@id/SurahEnglish"
+
+        android:layout_marginLeft="32dp"
+
+
+
+
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:src="@drawable/left"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="78dp"
+
+
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        />
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:src="@drawable/right"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="78dp"
+
+
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        />
+
+
+    <TextView
+        android:id="@+id/SurahEnglish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        style="@style/mediumHeader"
+
+        tools:text="Al-Fatiha"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:layout_marginTop="26dp"
+
+        />
+
+    <TextView
+        android:id="@+id/SurahArabic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toTopOf="@id/image"
+
+        style="@style/largeHeader"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        tools:text="الفاتحه"
+
+        android:layout_marginTop="17dp"
+
+
+        />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        app:layout_constraintTop_toBottomOf="@id/image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/mosque"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+
+
+
+            android:id="@+id/surahText"
+
+            style="@style/mediumBody"
+
+            tools:text="بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ
+ الرَّحْمَنِ الرَّحِيمِ
+ مَالِكِ يَوْمِ الدِّينِ
+ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ
+ اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ
+ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّين
+
+"
+
+
+
+
+            android:gravity="center_horizontal"
+            android:paddingTop="15dp"
+
+            android:layout_marginHorizontal="16dp"
+
+            />
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+    <ImageView
+        android:id="@+id/mosque"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:src="@drawable/mosque"
+
+
+        tools:layout_editor_absoluteX="67dp"
+        tools:layout_editor_absoluteY="660dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

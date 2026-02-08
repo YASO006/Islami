@@ -1,14 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/hadith_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.screens.fragments.hadith.HadithFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/islami_quran"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:src="@drawable/islami_logo"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingTop="30dp"
+
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="33dp"
+
+        />
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

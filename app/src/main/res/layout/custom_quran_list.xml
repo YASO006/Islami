@@ -6,37 +6,21 @@
     android:layout_height="wrap_content">
 
 
-    <ImageView
-        android:id="@+id/suraVector"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:src="@drawable/sura_number"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="57dp"
-
-        />
-
     <TextView
         android:id="@+id/surahNumber"
-        android:layout_width="36dp"
-        android:layout_height="29dp"
+        style="@style/smallTitle"
+        android:layout_width="wrap_content"
 
-        android:textColor="@color/white"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/suraVector"
+        android:layout_height="wrap_content"
 
+        android:background="@drawable/sura_number"
         android:gravity="center"
-
-        app:layout_constraintLeft_toLeftOf="@id/suraVector"
-        app:layout_constraintRight_toRightOf="@id/suraVector"
-        app:layout_constraintTop_toTopOf="@id/suraVector"
-        tools:text="110"
+        android:textSize="16dp"
+        tools:layout_editor_absoluteX="7dp"
 
 
-        />
-
+        tools:layout_editor_absoluteY="10dp"
+        tools:text="114" />
 
     <TextView
         android:id="@+id/surahName"
@@ -46,11 +30,11 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="24dp"
 
-        tools:text="Al-Fatiha"
-        app:layout_constraintLeft_toRightOf="@id/suraVector"
+        app:layout_constraintLeft_toRightOf="@id/surahNumber"
+        app:layout_constraintTop_toTopOf="@id/surahNumber"
 
 
-        app:layout_constraintTop_toTopOf="@id/suraVector" />
+        tools:text="Al-Fatiha" />
 
     <TextView
         android:id="@+id/versesCount"
@@ -60,21 +44,33 @@
 
         android:layout_marginLeft="24dp"
 
-        tools:text="7 Verses"
+        tools:text="7"
 
-        app:layout_constraintBottom_toBottomOf="@id/suraVector"
+        app:layout_constraintBottom_toBottomOf="@id/surahNumber"
         app:layout_constraintTop_toBottomOf="@id/surahName"
-        app:layout_constraintLeft_toRightOf="@id/suraVector"
+        app:layout_constraintLeft_toRightOf="@id/surahNumber"
 
         />
 
+
+    <TextView
+        style="@style/smallTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginTop="3dp"
+        android:paddingLeft="5dp"
+
+        android:text="Verses"
+        app:layout_constraintStart_toEndOf="@+id/versesCount"
+        app:layout_constraintTop_toBottomOf="@+id/surahName" />
 
     <View
         android:layout_width="0dp"
         android:layout_height="1dp"
 
         android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="16dp"
 
         android:background="@color/white"
 
@@ -82,7 +78,9 @@
 
 
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/suraVector" />
+        tools:layout_editor_absoluteY="72dp"
+
+        />
 
     <TextView
         android:id="@+id/surahNameInArabic"
