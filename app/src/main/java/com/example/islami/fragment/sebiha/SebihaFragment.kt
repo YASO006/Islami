@@ -37,7 +37,7 @@ class SebihaFragment : Fragment() {
     }
 
     private fun initClickListner() {
-        sebihaBody.setOnClickListener {
+        view?.setOnClickListener {
 
             var arr : ArrayList<String> = arrayListOf("بسم اللة","الحمداللة","اللهم لك الحمد","اللهم لك الشكر","سبحان الله العظيم","سبحان ربي الاعلى")
 
@@ -45,6 +45,7 @@ class SebihaFragment : Fragment() {
 
             var count = Integer.parseInt(tasbihCount.text.toString())
             var flag = true
+
             count++
 
             while(count % 30 == 0){
@@ -57,11 +58,7 @@ class SebihaFragment : Fragment() {
                     zeikr.text = arr.get(i)
                     i++
                 }
-
                 break
-
-
-
             }
 
             println("index i = $i")
